@@ -1,0 +1,23 @@
+import 'dart:io';
+
+void main() {
+  stdout.writeln('Dame un número entero:');
+  int n = int.parse(stdin.readLineSync()!);
+
+  if (esPrimo(n)) {
+    stdout.writeln('El número $n es PRIMO');
+  } else {
+    stdout.writeln('El número $n NO es primo');
+  }
+}
+
+bool esPrimo(int n) {
+  if (n <= 1) return false;
+
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0) {
+      return false; 
+    }
+  }
+  return true;
+}
