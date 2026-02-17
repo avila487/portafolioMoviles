@@ -1,0 +1,47 @@
+
+main(){
+  // Assignment operators
+  int a = 10;
+  int? b;
+  b ??=20;
+  print(a); // Output: 20
+
+  // Conditional Operators
+  int c = (a > b) ? a : b;
+  print(c); // output: 20
+
+  int d = 23;
+  String response = (d > 25) ? 'd is greater than 25' : 'd is not greater than 25';
+  print(response); // Output: d is not greater than 25
+
+  
+}
+import 'dart:io';
+
+main(){
+  stdout.writeln('Enter your name: ');
+  String? name = stdin.readLineSync();
+  stdout.writeln('Hello $name');
+
+}
+import 'dart:io';
+
+main(){
+  stdout.write('Ingrese su nombre: ');
+  var nombre = stdin.readLineSync();
+  print('Hola $nombre');
+}
+
+
+import 'dart:io';
+
+main() {
+  stdout.write('Ingrese el primer número: ');
+  double a = double.parse(stdin.readLineSync()!);
+  stdout.write('Ingrese el segundo número: ');
+  double b = double.parse(stdin.readLineSync()!);
+
+  double suma = a+b;
+  print('La suma de $a + $b es igual a $suma');
+
+}
